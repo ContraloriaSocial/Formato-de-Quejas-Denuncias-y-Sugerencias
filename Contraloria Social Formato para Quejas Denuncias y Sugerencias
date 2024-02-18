@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas, Denuncias y Sugerencias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #informacion-adicional {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .cuadro-texto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        #img-izquierda {
+            float: left;
+            margin-right: 10px;
+        }
+
+        #img-derecha {
+            float: right;
+            margin-left: 10px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        label {
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        #genero-label {
+            color: #e44d26;
+        }
+
+        #suscripcion-label {
+            color: #4caf50;
+        }
+
+        #boton-enviar {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #boton-enviar:hover {
+            background-color: #0056b3;
+        }
+
+        #seccion-beneficiario {
+            margin-top: 30px;
+        }
+
+        #seccion-beneficiario label {
+            margin-top: 10px;
+        }
+
+        #seccion-beneficiario select {
+            width: calc(100% - 22px);
+        }
+
+        #seccion-domicilio {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="img-izquierda">
+        <img src="https://i.ibb.co/b1jcNDN/ri-1.jpg" alt="Imagen Izquierda">
+    </div>
+    <div id="img-derecha">
+        <img src="https://i.ibb.co/tsqkBgx/ri-2.jpg" alt="Imagen Derecha">
+    </div>
+
+    <header>
+        <h1>FORMATO PARA REALIZAR QUEJAS, DENUNCIAS Y SUGERENCIAS</h1>
+        
+        <div id="informacion-adicional">
+            <div class="cuadro-texto" id="fecha-presentacion">
+                <label for="fecha">Fecha de Presentación (Día/Mes/Año):</label>
+                <input type="text" id="fecha" name="fecha" placeholder="Ingrese la fecha" required>
+            </div>
+            <div class="cuadro-texto" id="folio-registro">
+                <label for="folio">Folio de Seguimiento/Número de Registro:</label>
+                <input type="text" id="folio" name="folio" placeholder="Ingrese el folio" required>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form action="#" method="post" id="miFormulario">
+
+            <section>
+                <h2>SOLICITAMOS SU VALIOSO APOYO PARA REGISTRAR SUS DATOS, YA QUE SON IMPORTANTES PARA LA DEBIDA RECEPCIÓN, ATENCIÓN, SEGUIMIENTO Y CONCLUSIÓN DE SU PETICIÓN</h2>
+
+                <label for="nombre-escuela">Nombre de la Escuela:</label>
+                <input type="text" id="nombre-escuela" name="nombre-escuela" required>
+
+                <label for="clave-escuela">Clave de la Escuela:</label>
+                <input type="text" id="clave-escuela" name="clave-escuela" required>
+
+                <label for="contrasena-comite">Nombre y/o Número de Registro del Comité:</label>
+                <input type="text" id="contrasena-comite" name="contrasena-comite" required>
+
+                <label for="turno">Turno:</label>
+                <select id="turno" name="turno">
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino">Vespertino</option>
+                    <option value="mixto">Mixto</option>
+                </select>
+
+                <label for="entidad-municipio">Entidad o Municipio:</label>
+                <input type="text" id="entidad-municipio" name="entidad-municipio" required>
+            </section>
+
+            <section id="seccion-beneficiario">
+                <h2>Nombre del Beneficiario o Beneficiaria que presenta la petición</h2>
+
+                <label for="nombre-beneficiario">Nombre(s):</label>
+                <input type="text" id="nombre-beneficiario" name="nombre-beneficiario" required>
+
+                <label for="apellido-paterno">Apellido Paterno:</label>
+                <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+
+                <label for="apellido-materno">Apellido Materno:</label>
+                <input type="text" id="apellido-materno" name="apellido-materno" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </section>
+
+            <section id="seccion-domicilio">
+                <h2>Domicilio</h2>
+
+                <label for="calle">Calle y Número (Interior/Exterior):</label>
+                <input type="text" id="calle" name="calle" required>
+
+                <label for="colonia">Colonia/Localidad:</label>
+                <input type="text" id="colonia" name="colonia" required>
+
+                <label for="cp">C.P.:</label>
+                <input type="text" id="cp" name="cp" required>
+
+                <label for="municipio">Municipio/Delegación:</label>
+                <input type="text" id="municipio" name="municipio" required>
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+
+                <label for="telefono">Teléfono (10 dígitos sin lada):</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+            </section>
+
+            <section>
+                <h2>Opciones Adicionales</h2>
+
+                <input type="checkbox" id="suscripcion" name="suscripcion">
+                <label for="suscripcion" id="suscripcion-label">Suscribirse al boletín</label>
+            </section>
+
+            <input type="submit" value="Enviar" id="boton-enviar" onclick="enviarFormulario()">
+        </form>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        function enviarFormulario() {
+            var nombreEscuela = document.getElementById("nombre-escuela").value;
+            var claveEscuela = document.getElementById("clave-escuela").value;
+            var contrasenaComite = document.getElementById("contrasena-comite").value;
+            var turno = document.getElementById("turno").value;
+            var entidadMunicipio = document.getElementById("entidad-municipio").value;
+
+            var fechaPresentacion = document.getElementById("fecha").value;
+            var folioRegistro = document.getElementById("folio").value;
+
+            var nombreBeneficiario = document.getElementById("nombre-beneficiario").value;
+            var apellidoPaterno = document.getElementById("apellido-paterno").value;
+            var apellidoMaterno = document.getElementById("apellido-materno").value;
+            var edad = document.getElementById("edad").value;
+            var sexo = document.getElementById("sexo").value;
+
+            var calle = document.getElementById("calle").value;
+            var colonia = document.getElementById("colonia").value;
+            var cp = document.getElementById("cp").value;
+            var municipio = document.getElementById("municipio").value;
+            var estado = document.getElementById("estado").value;
+            var telefono = document.getElementById("telefono").value;
+            var correo = document.getElementById("correo").value;
+
+            var suscripcion = document.getElementById("suscripcion").checked;
+
+            console.log("Nombre de la Escuela: " + nombreEscuela);
+            console.log("Clave de la Escuela: " + claveEscuela);
+            console.log("Nombre y/o Número de Registro del Comité: " + contrasenaComite);
+            console.log("Turno: " + turno);
+            console.log("Entidad o Municipio: " + entidadMunicipio);
+            console.log("Fecha de Presentación: " + fechaPresentacion);
+            console.log("Folio de Seguimiento/Número de Registro: " + folioRegistro);
+            console.log("Nombre del Beneficiario: " + nombreBeneficiario);
+            console.log("Apellido Paterno: " + apellidoPaterno);
+            console.log("Apellido Materno: " + apellidoMaterno);
+            console.log("Edad: " + edad);
+            console.log("Sexo: " + sexo);
+            console.log("Calle y Número: " + calle);
+            console.log("Colonia/Localidad: " + colonia);
+            console.log("C.P.: " + cp);
+            console.log("Municipio/Delegación: " + municipio);
+            console.log("Estado: " + estado);
+            console.log("Teléfono: " + telefono);
+            console.log("Correo Electrónico: " + correo);
+            console.log("Suscripción al boletín: " + suscripcion);
+        }
+    </script>
+
+</body>
+</html>
